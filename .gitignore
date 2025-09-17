@@ -1,5 +1,6 @@
 .haxelib/
 export/
+dump/
 
 .DS_Store
 RECOVER_**.fla
