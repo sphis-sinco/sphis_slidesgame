@@ -21,12 +21,12 @@ class Paths
 
 	public static function getDataFile(folder:String, file:String)
 	{
-		return getAssetsPath((folder != null ? folder + "/" : "") + "data/" + file));
+		return getAssetsPath((folder != null ? folder + "/" : "") + "data/" + file);
 	}
 
 	public static function getImageFile(folder:String, file:String)
 	{
-		return getAssetsPath((folder != null ? folder + "/" : "") + "images/" + file+".png"));
+		return getAssetsPath((folder != null ? folder + "/" : "") + "images/" + file + ".png");
 	}
 
 	public static function getText(path:String):String
