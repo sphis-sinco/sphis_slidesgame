@@ -19,12 +19,12 @@ class Paths
 		return return_path_prefix + path;
 	}
 
-	public static function getDataFile(folder:String, file:String)
+	public static function getDataFile(file:String, ?folder:String)
 	{
 		return getAssetsPath((folder != null ? folder + "/" : "") + "data/" + file);
 	}
 
-	public static function getImageFile(folder:String, file:String)
+	public static function getImageFile(file:String, ?folder:String)
 	{
 		return getAssetsPath((folder != null ? folder + "/" : "") + "images/" + file + ".png");
 	}

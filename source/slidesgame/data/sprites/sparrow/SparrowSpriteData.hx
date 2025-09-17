@@ -11,13 +11,11 @@ class SparrowSpriteData
         @:jignored
 	public var id:String;
 
-	public function new(id:String):Void
+	public function new(id:String, ?folder:String):Void
 	{
-		this.id = id;
-
 		var parser = new JsonParser<SparrowSpriteData>();
 
-		final jsonPath = Paths.getDataFile("ui", id + ".json");
+		final jsonPath = Paths.getDataFile(id + ".json", folder);
 		var json = parser.fromJson(Paths.getText(jsonPath), jsonPath);
 
 		for (e in parser.errors)
@@ -34,6 +32,15 @@ class SparrowSpriteData
 					trace("SparrowSpriteData unknown parsing error: " + e);
 			}
 		}
+		if (json == null)
+		{
+			throw "Could not parse data for SparrowSprite: " + id + " (path: " + jsonPath + ")";
+		}
+
+		this.id = id;
+
+		this.imageName = json.imageName;
+		this.animations = json.animations;
         }
         
 }
