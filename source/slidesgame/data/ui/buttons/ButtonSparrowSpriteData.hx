@@ -1,22 +1,17 @@
 package slidesgame.data.sprites.sparrow;
 
 import json2object.JsonParser;
+import slidesgame.data.sprites.sparrow.SparrowSpriteData;
 
-class SparrowSpriteData
+class ButtonSparrowSpriteData extends SparrowSpriteData
 {
-        public var imageName:String;
+        public var button:ButtonStateData;
 
-        public var animations:Array<SparrowAnimationData>;
-        
-        @:jignored
-	public var id:String;
+        override public function new(id:String, ?folder:String)
+        {
+                super();
 
-	public function new(?id:String, ?folder:String):Void
-	{
-		if (id == null)
-			return;
-
-		var parser = new JsonParser<SparrowSpriteData>();
+		var parser = new JsonParser<ButtonSparrowSpriteData>();
 
 		final jsonPath = Paths.getDataFile(id + ".json", folder);
 		var json = parser.fromJson(Paths.getText(jsonPath), jsonPath);
@@ -32,18 +27,20 @@ class SparrowSpriteData
 				case UnknownVariable(variable, pos):
 					trace("UnknownVariable(variable: " + variable + ", pos: " + pos + ")");
 				default:
-					trace("SparrowSpriteData unknown parsing error: " + e);
+					trace("ButtonSparrowSpriteData unknown parsing error: " + e);
 			}
 		}
 		if (json == null)
 		{
-			throw "Could not parse data for SparrowSprite: " + id + " (path: " + jsonPath + ")";
+			throw "Could not parse data for ButtonSparrowSprite: " + id + " (path: " + jsonPath + ")";
 		}
 
 		this.id = id;
 
 		this.imageName = json.imageName;
 		this.animations = json.animations;
+
+		this.button = json.button;
         }
         
 }
