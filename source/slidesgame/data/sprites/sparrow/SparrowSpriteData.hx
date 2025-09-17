@@ -1,4 +1,4 @@
-package slidesgame.data.sprites;
+package slidesgame.data.sprites.sparrow;
 
 import json2object.JsonParser;
 

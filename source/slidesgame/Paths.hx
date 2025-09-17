@@ -1,4 +1,4 @@
-package ontime;
+package slidesgame;
 
 import lime.utils.Assets;
 #if sys
