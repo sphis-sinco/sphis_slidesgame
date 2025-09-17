@@ -7,7 +7,7 @@ import sys.io.File;
 
 class Paths
 {
-	public static function getAssetsPath(path:String)
+	public static function getAssetsPath(path:String, ?folder:String)
 	{
 		var return_path_prefix:String = "";
 
@@ -16,17 +16,17 @@ class Paths
 			return_path_prefix = "assets/";
 		}
 
-		return return_path_prefix + path;
+		return (folder != null ? folder + "/" : "") + return_path_prefix + path;
 	}
 
 	public static function getDataFile(file:String, ?folder:String)
 	{
-		return getAssetsPath((folder != null ? folder + "/" : "") + "data/" + file);
+		return getAssetsPath("data/" + file, folder);
 	}
 
 	public static function getImageFile(file:String, ?folder:String)
 	{
-		return getAssetsPath((folder != null ? folder + "/" : "") + "images/" + file + ".png");
+		return getAssetsPath("images/" + file + ".png", folder);
 	}
 
 	public static function getText(path:String):String
