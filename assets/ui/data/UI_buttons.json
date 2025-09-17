@@ -1,0 +1,22 @@
+{
+        "imageName": "UI_buttons",
+
+        "animations": [
+                {
+                        "name": "button idle",
+                        "symbolName": "button idle instance",
+                        "offsets": [0,0]
+                },
+                {
+                        "name": "button selected",
+                        "symbolName": ["button selected instance"],
+                        "offsets": [0,0]
+                }
+        ],
+
+        "button": {
+                "normal": "button idle",
+                "hover": "button selected",
+                "pressed": "button selected"
+        }
+}
