@@ -1,8 +1,8 @@
-package;
+package slidesgame.ui.title;
 
 import flixel.FlxState;
 
-class PlayState extends FlxState
+class TitleScreen extends FlxState
 {
 	override public function create()
 	{
