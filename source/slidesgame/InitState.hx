@@ -9,7 +9,7 @@ class InitState extends FlxState
 	{
 		super.create();
 
-		FlxG.switchState(() -> new slidesgame.ui.title.TitleScreen());
+		FlxG.switchState(() -> new slidesgame.menus.title.TitleScreen());
 	}
 
 	override public function update(elapsed:Float)

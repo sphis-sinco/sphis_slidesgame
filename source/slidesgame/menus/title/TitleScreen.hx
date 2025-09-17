@@ -1,4 +1,4 @@
-package slidesgame.ui.title;
+package slidesgame.menus.title;
 
 import flixel.FlxState;
 
