@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="UI_buttons.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="button idle instance 10000" x="4" y="4" width="331" height="328"/>
+	<SubTexture name="button selected instance 10000" x="343" y="4" width="332" height="328"/>
+</TextureAtlas>
