@@ -9,7 +9,7 @@
                 },
                 {
                         "name": "button selected",
-                        "symbolName": ["button selected instance"],
+                        "symbolName": "button selected instance",
                         "offsets": [0,0]
                 }
         ],
